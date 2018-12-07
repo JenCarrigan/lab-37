@@ -6,37 +6,53 @@
 ### Author: Student/Group Name
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com)
-* [front-end](http://xyz.com)
+* [Lab-Context Sandbox](https://codesandbox.io/s/7k8o5pw246)
+* [Lab Sandbox](https://codesandbox.io/s/oly3o4263q)
 
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+### Lab-Context Modules
+#### `index.js`
+Renders Main function which call App class
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### `app.js`
+App class renders GenericContext Class, which wraps around Content class, which wraps around Jen class
 
-###### `bar(array) -> array`
-Usage Notes or examples
+#### `context.js`
+Function GenericContext creates React context
+SettingsProvider class sets state in constructor
+ Methods
+  changeTitleTo: sets state for title property
+  Rendersprops children wrapping it in context container
 
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+#### `content.js`
+Consumes GenericContext and returns title
 
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+#### `jen.js`
+Consumes GenericContext and returns button to change title.
 
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+### Lab Modules
+#### `index.js`
+Renders and provides store to App
+
+#### `app.js`
+Renders LoginContext, Login, and the Auth middleware
+
+#### `context.js`
+Provides context to its children
+
+#### `login.js`
+Renders the login page and get status of login
+
+#### `auth.js`
+Checks the capabilities of the user to render certain components/elements
+
+#### `list.js`
+Wrapped Add New button in Auth create
+Wrapped Edit button in Auth update
+Wrapped Delete button in Auth delete
+
+#### `record.js`
+Wrapped entire form component in Auth create
 
 #### UML
-Link to an image of the UML for your application and response to events
+![Lab-Context](https://raw.githubusercontent.com/JenCarrigan/data-structures-and-algorithms/master/%3Aassets/lab-context-UML.jpg)
+![Lab-37](https://raw.githubusercontent.com/JenCarrigan/data-structures-and-algorithms/master/%3Aassets/lab-37-UML.jpg)
